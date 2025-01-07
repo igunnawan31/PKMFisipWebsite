@@ -20,12 +20,24 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Users/Igunawan/PKMFisipWebsite/Pages/AudioBook/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXVkaW9Cb29rXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Igunawan/PKMFisipWebsite/Pages/EBook/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRUJvb2tcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Igunawan/PKMFisipWebsite/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Igunawan/PKMFisipWebsite/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Igunawan/PKMFisipWebsite/Pages/PeminjamanBuku/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVtaW5qYW1hbkJ1a3VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Igunawan/PKMFisipWebsite/Pages/Privacy.cshtml]
