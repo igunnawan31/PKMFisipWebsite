@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PKMFisipWebsite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb21196f7dcfcb494e269c94de6d278f3e04105a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+751d0a7c06548f5e2d343fa4bb4c78b08cfabf37")]
 [assembly: System.Reflection.AssemblyProductAttribute("PKMFisipWebsite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PKMFisipWebsite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
