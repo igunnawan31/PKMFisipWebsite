@@ -11,7 +11,7 @@ public class AppDbContext:DbContext{
     public DbSet<Authorship>? Authorships { get; set; }
     public DbSet<Publisher>? Publishers { get; set; }
     public DbSet<User>? Users { get; set; }
-    public DbSet<BookPublished>? BookPublisheds { get; set; }
+    public DbSet<BooksPublished>? BooksPublisheds { get; set; }
     public DbSet<IsReading>? IsReadings { get; set; }
     public DbSet<HasRead>? HasReads { get; set; }
     public DbSet<ReadLater>? ReadLaters { get; set; }
