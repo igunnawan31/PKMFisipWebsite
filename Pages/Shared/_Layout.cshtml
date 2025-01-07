@@ -5,63 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - PKMFisipWebsite</title>
     <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PKMFisipWebsite.styles.css" asp-append-version="true" />
-    
+    <link href="~/css/app.css" rel="stylesheet" />
+    <!-- Tailwind CSS (Ensure it’s included in your project) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md navbar-toggleable-xl navbar-light bg-[#1860C6] border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">PKMFisipWebsite</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/PeminjamanBuku/Index">Peminjaman Buku</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/EBook/Index">E-Book</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/AudioBook/Index">Audio Book</a>
-                        </li>
-                    </ul>
-                    <div class="navbar-buttons">
-                        <a asp-page="/Login/Index">
-                            <button class="btn btn-primary">Login</button>
-                        </a>
+        <header>
+        <nav class="bg-blue-900 text-white p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <a class="text-2xl font-semibold text-white" asp-area="" asp-page="/Index">PKMFisipWebsite</a>
+                <button class="block lg:hidden text-white" id="navbar-toggle-mobile">
+                    <!-- Hamburger Icon -->
+                    <div class="space-y-2">
+                        <div class="w-6 h-0.5 bg-white"></div>
+                        <div class="w-6 h-0.5 bg-white"></div>
+                        <div class="w-6 h-0.5 bg-white"></div>
                     </div>
+                </button>
+                <div class="hidden lg:flex space-x-6 justify-center items-center">
+                    <a class="hover:text-gray-300 text-white" asp-area="" asp-page="/Index">Home</a>
+                    <a class="hover:text-gray-300 text-white" asp-area="" asp-page="/Privacy">Privacy</a>
+                    <div class="relative group">
+                        <button class="group-hover:text-gray-300 text-white">
+                            Our Services
+                            <svg class="w-5 h-5 inline-block ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="absolute hidden group-hover:block bg-white text-black shadow-lg mt-1 rounded-md w-48">
+                            <a class="block px-4 py-2 hover:bg-gray-100" href="#">Peminjaman Buku</a>
+                            <a class="block px-4 py-2 hover:bg-gray-100" href="#">E-Book</a>
+                            <a class="block px-4 py-2 hover:bg-gray-100" href="#">Audio Book</a>
+                        </div>
+                    </div>
+                    <a class="hover:text-gray-300" href="#">
+                        <button class="rounded-lg text-white text-md border-white border-2 w-full max-h-screen p-3">Login</button>
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+
+<div class="mx-auto ">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
+    <footer class="border-top footer text-muted bg-blue-300">
+        <div class="container mx-auto text-black">
             &copy; 2025 - PKMFisipWebsite - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        // Mobile Navbar Toggle
+        document.getElementById('navbar-toggle-mobile').addEventListener('click', function () {
+            const navMenu = document.querySelector('.lg\\:flex');
+            navMenu.classList.toggle('hidden');
+        });
+    </script>
+
 </body>
 </html>
