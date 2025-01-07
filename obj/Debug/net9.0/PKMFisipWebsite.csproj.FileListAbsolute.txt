@@ -18,7 +18,6 @@ C:\Users\Igunawan\PKMFisipWebsite\obj\Debug\net9.0\PKMFisipWebsite.sourcelink.js
 C:\Users\Igunawan\PKMFisipWebsite\obj\Debug\net9.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Igunawan\PKMFisipWebsite\obj\Debug\net9.0\scopedcss\bundle\PKMFisipWebsite.styles.css
 C:\Users\Igunawan\PKMFisipWebsite\obj\Debug\net9.0\scopedcss\projectbundle\PKMFisipWebsite.bundle.scp.css
-C:\Users\Igunawan\PKMFisipWebsite\obj\Debug\net9.0\compressed\4ws2r9hro0-nmv1ixu63y.gz
 C:\Users\Igunawan\PKMFisipWebsite\obj\Debug\net9.0\compressed\1300g7thz5-b9sayid5wm.gz
 C:\Users\Igunawan\PKMFisipWebsite\obj\Debug\net9.0\compressed\n0e1q2yxru-61n19gt1b8.gz
 C:\Users\Igunawan\PKMFisipWebsite\obj\Debug\net9.0\compressed\h1qihu82re-xtxxf3hu2r.gz
@@ -97,3 +96,8 @@ C:\Users\Igunawan\PKMFisipWebsite\obj\Debug\net9.0\refint\PKMFisipWebsite.dll
 C:\Users\Igunawan\PKMFisipWebsite\obj\Debug\net9.0\PKMFisipWebsite.pdb
 C:\Users\Igunawan\PKMFisipWebsite\obj\Debug\net9.0\PKMFisipWebsite.genruntimeconfig.cache
 C:\Users\Igunawan\PKMFisipWebsite\obj\Debug\net9.0\ref\PKMFisipWebsite.dll
+C:\Users\Igunawan\PKMFisipWebsite\bin\Debug\net9.0\MySqlConnector.dll
+C:\Users\Igunawan\PKMFisipWebsite\bin\Debug\net9.0\MySqlConnector.DependencyInjection.dll
+C:\Users\Igunawan\PKMFisipWebsite\obj\Debug\net9.0\PKMFisipWebsite.csproj.AssemblyReference.cache
+C:\Users\Igunawan\PKMFisipWebsite\obj\Debug\net9.0\PKMFisip.CC0CD7E7.Up2Date
+C:\Users\Igunawan\PKMFisipWebsite\obj\Debug\net9.0\compressed\4ws2r9hro0-y070nxk5rp.gz
