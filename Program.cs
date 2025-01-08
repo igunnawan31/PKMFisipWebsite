@@ -1,12 +1,19 @@
 using Microsoft.Extensions.FileProviders;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
+using PKMFisipWebsite.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 var conString = builder.Configuration.GetConnectionString("Default");
 builder.Services.AddMySqlDataSource(conString!);
 // Tambahkan DbContext ke dalam container layanan
-builder.Services.AddDbContext<AppDbContext>(options =>
+builder.Services.AddDbContext<AppDbContextBook>(options =>
+    options.UseMySQL(conString!));
+builder.Services.AddDbContext<AppDbContextAuthor>(options =>
+    options.UseMySQL(conString!));
+builder.Services.AddDbContext<AppDbContextAudioBook>(options =>
+    options.UseMySQL(conString!));
+builder.Services.AddDbContext<AppDbContextEBook>(options =>
     options.UseMySQL(conString!));
 
 // Add services to the container.
