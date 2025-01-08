@@ -7,15 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 var conString = builder.Configuration.GetConnectionString("Default");
 builder.Services.AddMySqlDataSource(conString!);
 // Tambahkan DbContext ke dalam container layanan
-builder.Services.AddDbContext<AppDbContextBook>(options =>
+builder.Services.AddDbContext<LibraryDbContext>(options =>
     options.UseMySQL(conString!));
-builder.Services.AddDbContext<AppDbContextAuthor>(options =>
+builder.Services.AddDbContext<ReadingActivityDbContext>(options =>
     options.UseMySQL(conString!));
-builder.Services.AddDbContext<AppDbContextAudioBook>(options =>
+builder.Services.AddDbContext<UserDbContext>(options =>
     options.UseMySQL(conString!));
-builder.Services.AddDbContext<AppDbContextEBook>(options =>
-    options.UseMySQL(conString!));
-
 // Add services to the container.
 builder.Services.AddRazorPages();
 var app = builder.Build();
