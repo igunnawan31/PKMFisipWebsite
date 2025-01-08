@@ -3,10 +3,10 @@ using MySql.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace PKMFisipWebsite.Migrations
+namespace PKMFisipWebsite.Migrations.LibraryMigration
 {
     /// <inheritdoc />
-    public partial class Books : Migration
+    public partial class Library : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -67,47 +67,16 @@ namespace PKMFisipWebsite.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "BooksPublisheds",
+                name: "BooksPublished",
                 columns: table => new
                 {
-                    booksPublishedId = table.Column<string>(type: "varchar(255)", nullable: false),
+                    bookPublishedId = table.Column<string>(type: "varchar(255)", nullable: false),
                     publisherId = table.Column<string>(type: "longtext", nullable: true),
                     bookId = table.Column<string>(type: "longtext", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BooksPublisheds", x => x.booksPublishedId);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "HasReads",
-                columns: table => new
-                {
-                    hasReadId = table.Column<string>(type: "varchar(255)", nullable: false),
-                    bookId = table.Column<string>(type: "longtext", nullable: true),
-                    userId = table.Column<string>(type: "longtext", nullable: true),
-                    lastRead = table.Column<string>(type: "longtext", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_HasReads", x => x.hasReadId);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "IsReadings",
-                columns: table => new
-                {
-                    IsReadingId = table.Column<string>(type: "varchar(255)", nullable: false),
-                    userId = table.Column<string>(type: "longtext", nullable: true),
-                    bookId = table.Column<string>(type: "longtext", nullable: true),
-                    lastPage = table.Column<string>(type: "longtext", nullable: true),
-                    lastRead = table.Column<string>(type: "longtext", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_IsReadings", x => x.IsReadingId);
+                    table.PrimaryKey("PK_BooksPublished", x => x.bookPublishedId);
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
 
@@ -125,37 +94,6 @@ namespace PKMFisipWebsite.Migrations
                     table.PrimaryKey("PK_Publishers", x => x.publisherId);
                 })
                 .Annotation("MySQL:Charset", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "ReadLaters",
-                columns: table => new
-                {
-                    readLaterId = table.Column<string>(type: "varchar(255)", nullable: false),
-                    userId = table.Column<string>(type: "longtext", nullable: true),
-                    bookId = table.Column<string>(type: "longtext", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ReadLaters", x => x.readLaterId);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "Users",
-                columns: table => new
-                {
-                    userId = table.Column<string>(type: "varchar(255)", nullable: false),
-                    firstName = table.Column<string>(type: "longtext", nullable: true),
-                    lastName = table.Column<string>(type: "longtext", nullable: true),
-                    userEmail = table.Column<string>(type: "longtext", nullable: true),
-                    userPhone = table.Column<string>(type: "longtext", nullable: true),
-                    role = table.Column<string>(type: "longtext", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Users", x => x.userId);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
         }
 
         /// <inheritdoc />
@@ -171,22 +109,10 @@ namespace PKMFisipWebsite.Migrations
                 name: "Books");
 
             migrationBuilder.DropTable(
-                name: "BooksPublisheds");
-
-            migrationBuilder.DropTable(
-                name: "HasReads");
-
-            migrationBuilder.DropTable(
-                name: "IsReadings");
+                name: "BooksPublished");
 
             migrationBuilder.DropTable(
                 name: "Publishers");
-
-            migrationBuilder.DropTable(
-                name: "ReadLaters");
-
-            migrationBuilder.DropTable(
-                name: "Users");
         }
     }
 }
